@@ -1,17 +1,19 @@
-export interface PhoneNumberDictionary {
+interface PhoneNumberDictionary {
   [phone: string]: {
     num: number;
   };
 }
 
-export interface Contact {
+interface Contact {
   name: string;
   address: string;
   phones: PhoneNumberDictionary;
 }
 
-export enum Phonetype {
+enum Phonetype {
   Home = 'home',
   Office = 'office',
   Studio = 'studio',
 }
+
+export { Contact, Phonetype, PhoneNumberDictionary };
